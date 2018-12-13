@@ -2,7 +2,7 @@
 #
 # This script grabs data from Veeam about the Job that launched it.
 # Converts this data to JSON and writes it out to a tmp file.
-# It them launches the vcn binary telling telling it where the JSON data is.
+# It them launches the Momentum binary telling telling it where the JSON data is.
 
 # Add Veeam commands
 Add-PSSnapin VeeamPSSnapin
