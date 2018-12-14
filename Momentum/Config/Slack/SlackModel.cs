@@ -24,16 +24,20 @@ namespace Momentum.Config.Slack {
 		}
 
 		public override void PromptForNew() {
-			while (String.IsNullOrEmpty(Label)) {
+			while (string.IsNullOrEmpty(Label)) {
 				Console.WriteLine("Enter a label for this Slack configuration: ");
 				Label = Console.ReadLine();
-				if (String.IsNullOrEmpty(Label)) Console.WriteLine("You must enter a label for this configuration!");
+				if (string.IsNullOrEmpty(Label)) Console.WriteLine("You must enter a label for this configuration!");
 			}
 
-			while (String.IsNullOrEmpty(WebHook)) {
+			while (string.IsNullOrEmpty(WebHook)) {
 				Console.WriteLine("Enter the Slack web hook URL: ");
 				WebHook = Console.ReadLine();
-				if (String.IsNullOrEmpty(WebHook)) Console.WriteLine("You must enter a URL for the web hook!");
+				if (string.IsNullOrEmpty(WebHook)) Console.WriteLine("You must enter a URL for the web hook!");
+				if (!CheckUrlValidity(WebHook)) {
+					WebHook = null;
+					Console.WriteLine("You must enter a valid URL for the web hook!");
+				}
 			}
 
 			Console.WriteLine("Enter the Slack channel (leave blank to use the web hook channel): ");
@@ -41,11 +45,17 @@ namespace Momentum.Config.Slack {
 
 			Console.WriteLine("Enter the Slack bot name (leave blank to use \"Momentum Bot\"): ");
 			BotName = Console.ReadLine();
-			if (String.IsNullOrEmpty(BotName)) BotName = "Momentum Bot";
+			if (string.IsNullOrEmpty(BotName)) BotName = "Momentum Bot";
 
-			Console.WriteLine("Enter the Slack bot icon url (leave blank to use the Momentum icon): ");
-			IconUrl = Console.ReadLine();
-			if (String.IsNullOrEmpty(IconUrl)) IconUrl = MomentumIcon;
+			while (string.IsNullOrEmpty(IconUrl)) {
+				Console.WriteLine("Enter the Slack bot icon url (leave blank to use the Momentum icon): ");
+				IconUrl = Console.ReadLine();
+				if (string.IsNullOrEmpty(IconUrl)) IconUrl = MomentumIcon;
+				if (!CheckUrlValidity(IconUrl)) {
+					IconUrl = null;
+					Console.WriteLine("You must enter a valid URL for the icon url!");
+				}
+			}
 		}
 	}
 }

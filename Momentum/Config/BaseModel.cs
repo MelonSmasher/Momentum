@@ -1,3 +1,5 @@
+using System;
+
 namespace Momentum.Config {
 	public class BaseModel {
 		public string Label { get; set; }
@@ -9,5 +11,9 @@ namespace Momentum.Config {
 		}
 
 		public virtual void PromptForNew() { }
+
+		public static bool CheckUrlValidity(string source) {
+			return Uri.TryCreate(source, UriKind.Absolute, out Uri uriResult) && uriResult.Scheme == Uri.UriSchemeHttps;
+		}
 	}
 }

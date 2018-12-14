@@ -45,10 +45,8 @@ namespace Momentum {
 		/// <param name="opts"></param>
 		/// <returns></returns>
 		private static int Run(RunOptions opts) {
-			foreach (var file in opts.InputFiles) {
-				Console.WriteLine("Reading: " + file);
-			}
-
+			var runner = new Runner(opts.InputFiles);
+			runner.Run();
 			return 0;
 		}
 
