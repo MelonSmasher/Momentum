@@ -1,7 +1,3 @@
-namespace Momentum.Services
-{
-    public class Slack
-    {
-        
-    }
+namespace Momentum.Services {
+	public class Slack { }
 }
