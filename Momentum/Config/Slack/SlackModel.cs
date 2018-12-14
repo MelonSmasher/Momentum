@@ -1,46 +1,51 @@
 using System;
 
 namespace Momentum.Config.Slack {
-	public class SlackModel {
-		public string WebHook {
-			get { return WebHook; }
-			set { WebHook = value; }
-		}
+	public class SlackModel : BaseModel {
+		private const string MomentumIcon =
+			"https://raw.githubusercontent.com/TheSageColleges/VeeamSlackNotifications/master/asset/img/icon/veeam_slack.png";
 
-		public string Channel {
-			get { return Channel; }
-			set { Channel = value; }
-		}
+		public string WebHook { get; set; }
 
-		public string BotName {
-			get { return BotName; }
-			set { BotName = value; }
-		}
+		public string Channel { get; set; }
 
-		public string IconUrl {
-			get { return IconUrl; }
-			set { IconUrl = value; }
-		}
+		public string BotName { get; set; }
 
+		public string IconUrl { get; set; }
 
 		public SlackModel() { }
 
-		public SlackModel(string webHook, string channel, string botName, string iconUrl) {
+		public SlackModel(string label, string webHook, string channel, string botName, string iconUrl) {
+			Label = label;
 			WebHook = webHook;
 			Channel = channel;
 			BotName = botName;
 			IconUrl = iconUrl;
 		}
 
-		public void PromptForNew() {
-			Console.WriteLine("Enter the Slack web hook URL: ");
-			WebHook = Console.ReadLine();
-			Console.WriteLine("Enter the Slack channel: ");
+		public override void PromptForNew() {
+			while (String.IsNullOrEmpty(Label)) {
+				Console.WriteLine("Enter a label for this Slack configuration: ");
+				Label = Console.ReadLine();
+				if (String.IsNullOrEmpty(Label)) Console.WriteLine("You must enter a label for this configuration!");
+			}
+
+			while (String.IsNullOrEmpty(WebHook)) {
+				Console.WriteLine("Enter the Slack web hook URL: ");
+				WebHook = Console.ReadLine();
+				if (String.IsNullOrEmpty(WebHook)) Console.WriteLine("You must enter a URL for the web hook!");
+			}
+
+			Console.WriteLine("Enter the Slack channel (leave blank to use the web hook channel): ");
 			Channel = Console.ReadLine();
-			Console.WriteLine("Enter the Slack bot name: ");
+
+			Console.WriteLine("Enter the Slack bot name (leave blank to use \"Momentum Bot\"): ");
 			BotName = Console.ReadLine();
-			Console.WriteLine("Enter the Slack bot icon url: ");
+			if (String.IsNullOrEmpty(BotName)) BotName = "Momentum Bot";
+
+			Console.WriteLine("Enter the Slack bot icon url (leave blank to use the Momentum icon): ");
 			IconUrl = Console.ReadLine();
+			if (String.IsNullOrEmpty(IconUrl)) IconUrl = MomentumIcon;
 		}
 	}
 }

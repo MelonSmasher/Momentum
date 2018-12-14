@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using Newtonsoft.Json;
 
@@ -8,14 +9,8 @@ namespace Momentum.Config {
 		public ConfigModel Config = new ConfigModel();
 
 		public ConfigInterface() {
-			// Build the configuration directory path
-			var configDir = "config";
-			// Create the directory if it does not exist
-			Directory.CreateDirectory(configDir);
-			// Build the path to the config file
-			_configPath = configDir + "\\momentum.xml";
 			// If the config file does not exist
-			if (!File.Exists(_configPath)) {
+			if (!File.Exists(InitConfigFile())) {
 				// Write the empty config
 				WriteConfig();
 			} else {
@@ -64,6 +59,18 @@ namespace Momentum.Config {
 				if (reader != null)
 					reader.Close();
 			}
+		}
+
+		public string InitConfigFile() {
+			// Build the configuration directory path
+			var configDir = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) +
+			                "\\Momentum\\config";
+			// Create the directory if it does not exist
+			Directory.CreateDirectory(configDir);
+			// Build the path to the config file
+			var configPath = configDir + "\\momentum.json";
+			_configPath = configPath;
+			return configPath;
 		}
 	}
 }
