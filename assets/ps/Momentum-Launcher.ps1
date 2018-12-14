@@ -37,4 +37,6 @@ $tmp = New-TemporaryFile;
 # Convert the session to a JSON object and send it to the tmp file
 ConvertTo-Json -Compress -InputObject $session | Out-File $tmp.FullName;
 # Send the temp file path to our binary
-###
+#
+# Momentum.exe run -i $tmp.FullName
+#
