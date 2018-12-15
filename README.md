@@ -1,6 +1,7 @@
 # Momentum
 
 <img src="assets/img/Momentum.png" width="100">
+###### [Gyroscope by Tim Madle from the Noun Project](https://thenounproject.com/search/?q=momentum&i=145002)
 
 Post backup and restore actions from Veeam job session data.
 
