@@ -47,6 +47,7 @@ namespace Momentum {
 		private static int Run(RunOptions opts) {
 			var runner = new Runner(opts.InputFiles);
 			runner.Run();
+			Console.WriteLine("See ya next time.");
 			return 0;
 		}
 

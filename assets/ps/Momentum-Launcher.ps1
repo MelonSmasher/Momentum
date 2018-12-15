@@ -85,6 +85,7 @@ $WarningCount = ( $TaskSessions | Where-Object Status -eq 'Warning').Count
 $FailureCount = ( $TaskSessions | Where-Object Status -eq 'Failed').Count
 
 # Format some values for human eyes
+$Bottleneck = $session.Progress.BottleneckInfo.Bottleneck.ToString();
 $Duration = Convert-TimeSpanToHuman $Session.Progress.Duration
 $Rate = '{0}/s' -f (Convert-BytesToHuman $Session.Progress.AvgSpeed)
 $Processed = '{0} ({1}%)' -f (Convert-BytesToHuman $Session.Progress.ProcessedUsedSize), $Session.Info.CompletionPercentage
@@ -93,57 +94,51 @@ $Transferred = '{0} ({1:N1}x)' -f (Convert-BytesToHuman $Session.Progress.Transf
 
 # Grab and form only the data we want from the session into a flat object that matches our C# class
 $momentumData = [PSCustomObject]@{
-    Name = $session.Name
-    JobName = $session.OrigJobName
-    Id = $session.Id.Guid
+    Name = $session.Name.ToString()
+    JobName = $session.OrigJobName.ToString()
+    Id = $session.Id.Guid.ToString()
     SuccessCount = $SuccessCount
     WarningCount = $WarningCount
     FailureCount = $FailureCount
     Duration = $Duration
     RateHuman = $Rate
-    ProcessedHuman = Processed
+    ProcessedHuman = $Processed
     ReadHuman = $Read
     TransferredHuman = $Transferred
     BackupSize = $session.Info.BackedUpSize
     DataSize = $session.BackupStats.DataSize
     DedupRatio = $session.BackupStats.DedupRatio
     CompressRatio = $session.BackupStats.CompressRatio
-    JobSourceType = $session.JobSourceType
-    JobType = $session.JobType
-    Failures = $session.Info.Failures
-    Warnings = $session.Info.Warnings
-    Result = $session.Info.Result
-    Bottleneck = $session.Info.Progress.BottleneckInfo.Bottleneck
-    BottleneckSource = $session.Info.Progress.BottleneckInfo.Source
-    BottleneckProxy = $session.Info.Progress.BottleneckInfo.Proxy
-    BottleneckNetwork = $session.Info.Progress.BottleneckInfo.Network
-    BottleneckTarget = $session.Info.Progress.BottleneckInfo.Target
-    TotalObjects = $session.Info.Progress.TotalObjects
-    ProcessedObjects = $session.Info.Progress.ProcessedObjects
+    JobSourceType = $session.JobSourceType.ToString()
+    JobType = $session.JobType.ToString()
+    Result = $Session.Result.ToString()
+    Bottleneck = $Bottleneck
+    TotalObjects = $session.Progress.TotalObjects
+    ProcessedObjects = $session.Progress.ProcessedObjects
     BackedUpSize = $session.Info.BackedUpSize
     BackupTotalSize = $session.Info.BackupTotalSize
-    ReadSize = $session.Info.Progress.ReadSize
-    ReadedAverageSize = $session.Info.Progress.ReadedAverageSize
-    TransferedSize = $session.Info.Progress.TransferedSize
-    ProcessedDelta = $session.Info.Progress.ProcessedDelta
-    ProcessedUsedDelta = $session.Info.Progress.ProcessedUsedDelta
-    ReadDelta = $session.Info.Progress.ReadDelta
-    ReadedAverageDelta = $session.Info.Progress.ReadedAverageDelta
-    TransferedDelta = $session.Info.Progress.TransferedDelta
-    StartTimeLocal = $session.Info.Progress.StartTimeLocal.DateTime
-    StopTimeLocal = $session.Info.Progress.StopTimeLocal.DateTime
-    StartTimeUtc = $session.Info.Progress.StartTimeUtc.DateTime
-    StopTimeUtc = $session.Info.Progress.StopTimeUtc.DateTime
-    AvgSpeed = $session.Info.Progress.AvgSpeed
-    TotalSize = $session.Info.Progress.TotalSize
-    TotalUsedSize = $session.Info.Progress.TotalUsedSize
-    TotalSizeDelta = $session.Info.Progress.TotalSizeDelta
-    Ticks = $session.Info.Progress.Duration.Ticks
-    Days = $session.Info.Progress.Duration.Days
-    Hours = $session.Info.Progress.Duration.Hours
-    Milliseconds = $session.Info.Progress.Duration.Milliseconds
-    Minutes = $session.Info.Progress.Duration.Minutes
-    Seconds = $session.Info.Progress.Duration.Seconds
+    ReadSize = $session.Progress.ReadSize
+    ReadedAverageSize = $session.Progress.ReadedAverageSize
+    TransferedSize = $session.Progress.TransferedSize
+    ProcessedDelta = $session.Progress.ProcessedDelta
+    ProcessedUsedDelta = $session.Progress.ProcessedUsedDelta
+    ReadDelta = $session.Progress.ReadDelta
+    ReadedAverageDelta = $session.Progress.ReadedAverageDelta
+    TransferedDelta = $session.Progress.TransferedDelta
+    StartTimeLocal = $session.Progress.StartTimeLocal.DateTime.ToString()
+    StopTimeLocal = $session.Progress.StopTimeLocal.DateTime.ToString()
+    StartTimeUtc = $session.Progress.StartTimeUtc.DateTime.ToString()
+    StopTimeUtc = $session.Progress.StopTimeUtc.DateTime.ToString()
+    AvgSpeed = $session.Progress.AvgSpeed
+    TotalSize = $session.Progress.TotalSize
+    TotalUsedSize = $session.Progress.TotalUsedSize
+    TotalSizeDelta = $session.Progress.TotalSizeDelta
+    Ticks = $session.Progress.Duration.Ticks
+    Days = $session.Progress.Duration.Days
+    Hours = $session.Progress.Duration.Hours
+    Milliseconds = $session.Progress.Duration.Milliseconds
+    Minutes = $session.Progress.Duration.Minutes
+    Seconds = $session.Progress.Duration.Seconds
 }
 
 # Create a new tmp file
@@ -152,4 +147,4 @@ $tmp = New-TemporaryFile;
 ConvertTo-Json -Compress -InputObject $momentumData | Out-File $tmp.FullName;
 
 # Send the temp file path to our binary
-Start-Process -NoNewWindow -Wait -FilePath "$Env:Programfiles\Momentum\Momentum.exe" -ArgumentList "run", "-i", "$tmp.FullName";
+& "$Env:Programfiles\Momentum\Momentum.exe" run -i "$tmp.FullName";

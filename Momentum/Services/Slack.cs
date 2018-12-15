@@ -25,15 +25,18 @@ namespace Momentum.Services {
 
 			// Post the message
 			client.Post(_message);
+			Console.WriteLine("Slack message sent.");
 		}
 
 		private SlackAttachment FormAttachment() {
 			var slackAttachment = new SlackAttachment();
 
 			slackAttachment.Title = _veeamSession.Name + " - " + _veeamSession.Result;
-			slackAttachment.Pretext = _veeamSession.JobName + " (" + _veeamSession.JobType + ") " +
+			slackAttachment.Pretext = _veeamSession.JobName + " (" +
+			                          _veeamSession.JobType + ") " +
 			                          " finished with a " + _veeamSession.Result + " result.";
-			slackAttachment.Fallback = _veeamSession.JobName + " (" + _veeamSession.JobType + ") " +
+			slackAttachment.Fallback = _veeamSession.JobName + " (" +
+			                           _veeamSession.JobType + ") " +
 			                           " finished with a " + _veeamSession.Result + " result.";
 			slackAttachment.Footer = "Momentum";
 			slackAttachment.FooterIcon = Resources.LogoUrl;
@@ -63,17 +66,13 @@ namespace Momentum.Services {
 
 			slackAttachment.Fields = new List<SlackField> {
 				new SlackField {
-					Title = "Job Type",
-					Value = _veeamSession.JobType
-				},
-				new SlackField {
 					Title = "Duration",
 					Value = _veeamSession.Duration
 				},
-				new SlackField {
+				/*new SlackField {
 					Title = "Bottleneck",
 					Value = _veeamSession.Bottleneck
-				},
+				},*/
 				new SlackField {
 					Title = "Processing Rate",
 					Value = _veeamSession.RateHuman
