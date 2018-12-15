@@ -2,9 +2,6 @@ using System;
 
 namespace Momentum.Config.Slack {
 	public class SlackModel : BaseModel {
-		private const string MomentumIcon =
-			"https://raw.githubusercontent.com/TheSageColleges/VeeamSlackNotifications/master/asset/img/icon/veeam_slack.png";
-
 		public string WebHook { get; set; }
 
 		public string Channel { get; set; }
@@ -50,7 +47,7 @@ namespace Momentum.Config.Slack {
 			while (string.IsNullOrEmpty(IconUrl)) {
 				Console.WriteLine("Enter the Slack bot icon url (leave blank to use the Momentum icon): ");
 				IconUrl = Console.ReadLine();
-				if (string.IsNullOrEmpty(IconUrl)) IconUrl = MomentumIcon;
+				if (string.IsNullOrEmpty(IconUrl)) IconUrl = Resources.LogoUrl;
 				if (!CheckUrlValidity(IconUrl)) {
 					IconUrl = null;
 					Console.WriteLine("You must enter a valid URL for the icon url!");

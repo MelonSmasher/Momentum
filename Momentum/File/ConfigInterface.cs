@@ -1,16 +1,17 @@
 using System;
 using System.IO;
-using Newtonsoft.Json;
+using Momentum.Config;
 
-namespace Momentum.Config {
+namespace Momentum.File {
 	public class ConfigInterface {
 		private string _configPath;
 
 		public ConfigModel Config = new ConfigModel();
+		private readonly JsonInterface _jsonInterface = new JsonInterface();
 
 		public ConfigInterface() {
 			// If the config file does not exist
-			if (!File.Exists(InitConfigFile())) {
+			if (!System.IO.File.Exists(InitConfigFile())) {
 				// Write the empty config
 				WriteConfig();
 			} else {
@@ -25,7 +26,7 @@ namespace Momentum.Config {
 		/// <returns></returns>
 		public void ReadConfig() {
 			// Read the config from our file and deserialize it into our config class
-			Config = ReadFromJsonFile<ConfigModel>(_configPath);
+			Config = _jsonInterface.ReadFromJsonFile<ConfigModel>(_configPath);
 		}
 
 		/// <summary>
@@ -33,34 +34,15 @@ namespace Momentum.Config {
 		/// </summary>
 		/// <returns>bool</returns>
 		public bool WriteConfig() {
-			WriteToJsonFile<ConfigModel>(_configPath, Config);
+			_jsonInterface.WriteToJsonFile<ConfigModel>(_configPath, Config);
 			return true;
 		}
 
-		private static void WriteToJsonFile<T>(string filePath, T objectToWrite, bool append = false) where T : new() {
-			TextWriter writer = null;
-			try {
-				var contentsToWriteToFile = JsonConvert.SerializeObject(objectToWrite);
-				writer = new StreamWriter(filePath, append);
-				writer.Write(contentsToWriteToFile);
-			} finally {
-				if (writer != null)
-					writer.Close();
-			}
-		}
-
-		private static T ReadFromJsonFile<T>(string filePath) where T : new() {
-			TextReader reader = null;
-			try {
-				reader = new StreamReader(filePath);
-				var fileContents = reader.ReadToEnd();
-				return JsonConvert.DeserializeObject<T>(fileContents);
-			} finally {
-				if (reader != null)
-					reader.Close();
-			}
-		}
-
+		/// <summary>
+		/// Create the configuration file if it does not exist.
+		/// Reads the config file if it exists.
+		/// </summary>
+		/// <returns></returns>
 		public string InitConfigFile() {
 			// Build the configuration directory path
 			var configDir = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) +
