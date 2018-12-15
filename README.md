@@ -3,7 +3,8 @@
 Post backup and restore actions from Veeam job session data.
 
 <img src="assets/img/Momentum.png" width="100">
-##### [Gyroscope by Tim Madle from the Noun Project](https://thenounproject.com/search/?q=momentum&i=145002)
+
+###### Gyroscope by Tim Madle from the Noun Project
 
 ### This is a work in progress.
 
