@@ -1,6 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Momentum", "Momentum\Momentum.csproj", "{49F81CE2-A03E-4C06-A7E3-6B666BD49A94}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MomentumInstaller", "MomentumInstaller\MomentumInstaller.vdproj", "{8E59B25F-BF65-49B6-A6A7-2E38CC2B9ED2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +17,13 @@ Global
 		{49F81CE2-A03E-4C06-A7E3-6B666BD49A94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49F81CE2-A03E-4C06-A7E3-6B666BD49A94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49F81CE2-A03E-4C06-A7E3-6B666BD49A94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E59B25F-BF65-49B6-A6A7-2E38CC2B9ED2}.Debug|Any CPU.ActiveCfg = Debug
+		{8E59B25F-BF65-49B6-A6A7-2E38CC2B9ED2}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17D582BD-804E-4CBA-9428-D00AF5F4CBFD}
 	EndGlobalSection
 EndGlobal

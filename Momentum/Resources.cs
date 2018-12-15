@@ -1,9 +1,13 @@
+using System;
+
 namespace Momentum {
 	public class Resources {
-		public const string LogoUrl =
-			"https://raw.githubusercontent.com/MelonSmasher/Momentum/master/assets/img/Momentum.png";
+		public const string LogoUrl = "https://raw.githubusercontent.com/MelonSmasher/Momentum/master/assets/img/Momentum.png";
+        public static readonly string ConfigDirectory = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) +
+                            "\\Momentum\\config";
+        public static readonly string ConfigFile = ConfigDirectory + "\\momentum.json";
 
-		public class Colors {
+        public class Colors {
 			public const string None = "#c9cfce";
 			public const string Default = "#24aef4";
 			public const string Success = "#24f46a";
