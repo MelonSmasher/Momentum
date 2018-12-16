@@ -15,20 +15,38 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_1FB2D80AAC2311D0712E4E6612E16033"
+        "MsmKey" = "8:_068B06E12A0E0B1FF5E790EA68BB4B26"
         "OwnerKey" = "8:_73C1BF05D2E742C782F393416B9A5BE9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_5F8C8764488307A19104CAF1056217A4"
+        "MsmKey" = "8:_2C4A4159B5B032CEF885E9809EEB46A8"
         "OwnerKey" = "8:_73C1BF05D2E742C782F393416B9A5BE9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_5F8C8764488307A19104CAF1056217A4"
-        "OwnerKey" = "8:_FEBFDF6F74DF4A0E59167B78E6CF7B96"
+        "MsmKey" = "8:_2C4A4159B5B032CEF885E9809EEB46A8"
+        "OwnerKey" = "8:_068B06E12A0E0B1FF5E790EA68BB4B26"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_55A3A9967AB860962B7E677D85B242A7"
+        "OwnerKey" = "8:_73C1BF05D2E742C782F393416B9A5BE9"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_55A3A9967AB860962B7E677D85B242A7"
+        "OwnerKey" = "8:_068B06E12A0E0B1FF5E790EA68BB4B26"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6708FFF78098A53BC78A1E70C3F4580E"
+        "OwnerKey" = "8:_73C1BF05D2E742C782F393416B9A5BE9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -39,20 +57,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_8CB0E064B802BFBB7F5F00045575223C"
+        "MsmKey" = "8:_DE72269F8E54141D208569D2EB7DB641"
         "OwnerKey" = "8:_73C1BF05D2E742C782F393416B9A5BE9"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D347C6D267C9E1B283B47C1766CEF6A5"
-        "OwnerKey" = "8:_73C1BF05D2E742C782F393416B9A5BE9"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D347C6D267C9E1B283B47C1766CEF6A5"
-        "OwnerKey" = "8:_FEBFDF6F74DF4A0E59167B78E6CF7B96"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -63,18 +69,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_FEBFDF6F74DF4A0E59167B78E6CF7B96"
-        "OwnerKey" = "8:_73C1BF05D2E742C782F393416B9A5BE9"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5F8C8764488307A19104CAF1056217A4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_73C1BF05D2E742C782F393416B9A5BE9"
         "MsmSig" = "8:_UNDEFINED"
@@ -82,25 +76,31 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FEBFDF6F74DF4A0E59167B78E6CF7B96"
+        "OwnerKey" = "8:_068B06E12A0E0B1FF5E790EA68BB4B26"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D347C6D267C9E1B283B47C1766CEF6A5"
+        "OwnerKey" = "8:_2C4A4159B5B032CEF885E9809EEB46A8"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8CB0E064B802BFBB7F5F00045575223C"
+        "OwnerKey" = "8:_6708FFF78098A53BC78A1E70C3F4580E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1FB2D80AAC2311D0712E4E6612E16033"
+        "OwnerKey" = "8:_DE72269F8E54141D208569D2EB7DB641"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_55A3A9967AB860962B7E677D85B242A7"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -121,6 +121,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -137,6 +145,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -166,23 +190,23 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1FB2D80AAC2311D0712E4E6612E16033"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_068B06E12A0E0B1FF5E790EA68BB4B26"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:CommandLine, Version=2.3.0.0, Culture=neutral, PublicKeyToken=de6f01bd326f8c32, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:Slack.Webhooks, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_1FB2D80AAC2311D0712E4E6612E16033"
+                    "_068B06E12A0E0B1FF5E790EA68BB4B26"
                     {
-                    "Name" = "8:CommandLine.dll"
+                    "Name" = "8:Slack.Webhooks.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:CommandLine.dll"
+            "SourcePath" = "8:Slack.Webhooks.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_3823421A1EFC49BB81E2BD31BC908CF4"
+            "Folder" = "8:_FCD9B60416EB4D5295A497088968DC6A"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -197,76 +221,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5F8C8764488307A19104CAF1056217A4"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-                "ScatterAssemblies"
-                {
-                    "_5F8C8764488307A19104CAF1056217A4"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:System.Net.Http.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_3823421A1EFC49BB81E2BD31BC908CF4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8CB0E064B802BFBB7F5F00045575223C"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ConsoleMenu, Version=0.1.1.57, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_8CB0E064B802BFBB7F5F00045575223C"
-                    {
-                    "Name" = "8:ConsoleMenu.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:ConsoleMenu.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_3823421A1EFC49BB81E2BD31BC908CF4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D347C6D267C9E1B283B47C1766CEF6A5"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2C4A4159B5B032CEF885E9809EEB46A8"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_D347C6D267C9E1B283B47C1766CEF6A5"
+                    "_2C4A4159B5B032CEF885E9809EEB46A8"
                     {
                     "Name" = "8:Newtonsoft.Json.dll"
                     "Attributes" = "3:512"
@@ -275,7 +237,100 @@
             "SourcePath" = "8:Newtonsoft.Json.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_3823421A1EFC49BB81E2BD31BC908CF4"
+            "Folder" = "8:_FCD9B60416EB4D5295A497088968DC6A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_55A3A9967AB860962B7E677D85B242A7"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+                "ScatterAssemblies"
+                {
+                    "_55A3A9967AB860962B7E677D85B242A7"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:System.Net.Http.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_FCD9B60416EB4D5295A497088968DC6A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6708FFF78098A53BC78A1E70C3F4580E"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:ConsoleMenu, Version=0.1.1.57, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_6708FFF78098A53BC78A1E70C3F4580E"
+                    {
+                    "Name" = "8:ConsoleMenu.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:ConsoleMenu.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_FCD9B60416EB4D5295A497088968DC6A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DE72269F8E54141D208569D2EB7DB641"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:CommandLine, Version=2.3.0.0, Culture=neutral, PublicKeyToken=de6f01bd326f8c32, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_DE72269F8E54141D208569D2EB7DB641"
+                    {
+                    "Name" = "8:CommandLine.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:CommandLine.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_FCD9B60416EB4D5295A497088968DC6A"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -295,7 +350,7 @@
             "SourcePath" = "8:..\\assets\\ps\\Momentum-Launcher.ps1"
             "TargetName" = "8:Momentum-Launcher.ps1"
             "Tag" = "8:"
-            "Folder" = "8:_3823421A1EFC49BB81E2BD31BC908CF4"
+            "Folder" = "8:_FCD9B60416EB4D5295A497088968DC6A"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -308,37 +363,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FEBFDF6F74DF4A0E59167B78E6CF7B96"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Slack.Webhooks, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_FEBFDF6F74DF4A0E59167B78E6CF7B96"
-                    {
-                    "Name" = "8:Slack.Webhooks.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Slack.Webhooks.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_3823421A1EFC49BB81E2BD31BC908CF4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
         }
@@ -369,33 +393,11 @@
                 {
                 }
             }
-            "{1525181F-901A-416C-8A58-119130FE478E}:_F735DA47318C4FAF8145E69B60FF24DC"
-            {
-            "Name" = "8:#1935"
-            "AlwaysCreate" = "11:FALSE"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Property" = "8:ProgramFiles64Folder"
-                "Folders"
-                {
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_3823421A1EFC49BB81E2BD31BC908CF4"
-                    {
-                    "Name" = "8:Momentum"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_A1870CD46F934BF38ED4667EB6592DFD"
-                        "Folders"
-                        {
-                        }
-                    }
-                }
-            }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_FCD9B60416EB4D5295A497088968DC6A"
             {
-            "DefaultLocation" = "8:[ProgramFiles64Folder][Manufacturer]\\[ProductName]"
+            "DefaultLocation" = "8:[ProgramFiles64Folder][ProductName]"
             "Name" = "8:#1925"
-            "AlwaysCreate" = "11:FALSE"
+            "AlwaysCreate" = "11:TRUE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Property" = "8:TARGETDIR"
@@ -420,13 +422,13 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Momentum"
         "ProductCode" = "8:{4E3FA4A2-EB53-4DAC-B163-BADAFA4F5B51}"
-        "PackageCode" = "8:{BBA27DF6-75F3-447B-80C0-5D99A4E18534}"
+        "PackageCode" = "8:{5E7C9127-8252-4886-9096-86817B0608BA}"
         "UpgradeCode" = "8:{78D8A70E-8C4F-47D9-8536-731EE48A0F8A}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
-        "InstallAllUsers" = "11:FALSE"
+        "InstallAllUsers" = "11:TRUE"
         "ProductVersion" = "8:0.0.1"
         "Manufacturer" = "8:Momentum"
         "ARPHELPTELEPHONE" = "8:"
@@ -437,8 +439,8 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
-        "ARPIconIndex" = "3:0"
+        "ARPPRODUCTICON" = "8:_73C1BF05D2E742C782F393416B9A5BE9"
+        "ARPIconIndex" = "3:32512"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
         "TargetPlatform" = "3:1"
@@ -944,7 +946,7 @@
             "SourcePath" = "8:..\\Momentum\\obj\\Release\\Momentum.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_3823421A1EFC49BB81E2BD31BC908CF4"
+            "Folder" = "8:_FCD9B60416EB4D5295A497088968DC6A"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
