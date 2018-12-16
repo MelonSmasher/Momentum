@@ -26,3 +26,7 @@ Post backup and restore actions from Veeam job session data.
 - [ ] Support Twilio
 - [ ] Support Jira
 
+## Installation & Setup
+
+Check out [the wiki](https://github.com/MelonSmasher/Momentum/wiki) for documentation.
+ 
