@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Net;
 using Momentum.Config.Slack;
 using Momentum.Veeam;
 using Slack.Webhooks;
@@ -22,6 +23,9 @@ namespace Momentum.Services {
 
 			// Build the rich format with an attachment
 			_message.Attachments = new List<SlackAttachment> {FormAttachment()};
+
+			//Enable TLS 1.2
+			ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
 			// Post the message
 			client.Post(_message);
